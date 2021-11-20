@@ -27,6 +27,8 @@ Red_Spaceship = pygame.transform.rotate(pygame.transform.scale(Red_Spaceship, (5
 # sounds:
 Hit_Sound = pygame.mixer.Sound(os.path.join('Assets','Grenade+1.mp3'))
 Shoot_Sound = pygame.mixer.Sound(os.path.join('Assets','Gun+Silencer.mp3'))
+Shoot_Sound_2 = pygame.mixer.Sound(os.path.join('Assets','Gun+Silencer.mp3'))
+Shoot_Sound_2.set_volume(0.2)
 Bg_Music = pygame.mixer.music.load('Assets\\LHS-RLD-09.mp3')
 Bg_Music_handler = pygame.mixer.music
 Red_Wins = pygame.mixer.Sound(os.path.join('Assets','Red_Wins.mp3'))
@@ -142,7 +144,7 @@ def main():
 
         if i % 20 == 0 :
             bullet = pygame.Rect(Yellow.x+Yellow.width, Yellow.y + (40/2)+4 , 10 , 5)
-            #Shoot_Sound.play()
+            Shoot_Sound_2.play()
             Yel_B.append(bullet)
 
         for Event in pygame.event.get(): #Making sure the game quits when asked to (when we click the 'X' icon)
