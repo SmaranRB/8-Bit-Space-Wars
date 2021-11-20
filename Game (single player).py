@@ -153,7 +153,7 @@ def main():
                 
             if Event.type == pygame.KEYDOWN:
                 
-                if Event.key == pygame.K_RCTRL and len(Red_B)<3:
+                if Event.key == pygame.K_LCTRL and len(Red_B)<3:
                     bullet = pygame.Rect(Red.x, Red.y + (40/2)+4 , 10 , 5)
                     Shoot_Sound.play()
                     Red_B.append(bullet)
